@@ -15,5 +15,20 @@ function getRandomComputerResult() {
     } else {
       return false;
     }
-    
   }
+
+  let compChoice = getRandomComputerResult();
+
+function getRoundResults(userOption) {
+  
+  if (hasPlayerWonTheRound = true) {
+    playerScore++;
+    return "Player wins! "+ userOption + " beats "+ compChoice;
+  } else if (hasPlayerWonTheRound = false) {
+    computerScore++;
+    return "Computer wins! "+ compChoice + " beats "+ userOption;
+  } else {
+    return "It's a tie! Both chose "+ userOption;
+  }
+ 
+}
