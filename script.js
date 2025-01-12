@@ -2,11 +2,18 @@
 
 function getRandomComputerResult() {
     const options = ["Rock", "Paper", "Scissors"];
-    const length = options.length;
-    const answer = (Math.floor(Math.random()* length));
-    console.log(answer);
-    console.log(options[answer]);
+    const answer = (Math.floor(Math.random()* options.length));
     return options[answer];
-  
   }
   console.log(getRandomComputerResult());
+
+  function hasPlayerWonTheRound(player, computer) {
+    let user = player;
+    let comp = computer;
+    if (user === "Rock" && comp === "Scissors" || user === "Scissors" && comp === "Paper" || user === "Paper" && comp === "Rock") {
+      return true;
+    } else {
+      return false;
+    }
+    
+  }
