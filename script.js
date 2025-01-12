@@ -19,16 +19,16 @@ function getRandomComputerResult() {
 
   let compChoice = getRandomComputerResult();
 
-function getRoundResults(userOption) {
+  function getRoundResults(userOption) {
+    const computerResult = getRandomComputerResult();
   
-  if (hasPlayerWonTheRound = true) {
-    playerScore++;
-    return "Player wins! "+ userOption + " beats "+ compChoice;
-  } else if (hasPlayerWonTheRound = false) {
-    computerScore++;
-    return "Computer wins! "+ compChoice + " beats "+ userOption;
-  } else {
-    return "It's a tie! Both chose "+ userOption;
+    if (hasPlayerWonTheRound(userOption, computerResult)) {
+      playerScore++;
+      return `Player wins! ${userOption} beats ${computerResult}`;
+    } else if (computerResult === userOption) {
+      return `It's a tie! Both chose ${userOption}`;
+    } else {
+      computerScore++;
+      return `Computer wins! ${computerResult} beats ${userOption}`;
+    }
   }
- 
-}
