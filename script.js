@@ -58,3 +58,14 @@ function showResults(userOption) {
   }
 
 };
+
+function resetGame() {
+  playerScore = 0;
+  computerScore = 0;
+  computerScoreSpanElement.innerText = computerScore;
+  playerScoreSpanElement.innerText = playerScore;
+  resetGameBtn.style.display = "none";
+  optionsContainer.style.display = "block";
+  winnerMsgElement.innerText = "";
+  roundResultsMsg.innerText = " ";
+};
